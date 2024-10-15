@@ -1,0 +1,52 @@
+
+.projects{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.project{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+.project-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    max-width: 30%;
+    height: 320px;
+}
+.project-description{
+    text-align: start;
+    padding: 20px;
+    
+    overflow-y: scroll;
+}
+
+.project-hr{
+    width: 99.9%;
+    border: none;
+
+    border-bottom: 6px dashed white;
+}
+
+.project-title{
+    width: 100%;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
