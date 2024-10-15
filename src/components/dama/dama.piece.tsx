@@ -3,14 +3,13 @@
 
 export type pieceProps = {
     setMove( pos: {x: number, y: number} ): void,
+    team?: "white" | "black",
     type: "normal" | "dama" | "move",
     pos: {
         x: number,
         y: number
     }
 }
-
-// add side 
 
 export const Piece = ( { setMove, pos, type }: pieceProps ) => {
 

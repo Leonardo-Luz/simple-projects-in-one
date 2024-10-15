@@ -7,7 +7,6 @@ import { Move, moveProps } from "./move.tile"
 export const Dama = () => {
 
     const [ board, setBoard ] = useState<((pieceProps) | (moveProps) | undefined)[][]>([])
-    // const [ loading, setLoading ] = useState(true);
 
     const mapSize = {
         x: 8, 
@@ -56,12 +55,16 @@ export const Dama = () => {
                         break;                        
                 }
                 
-                if(prev[pos.x + target.x][pos.y + target.y] == undefined && !((pos.x + target.x) > 7 || (pos.y + target.y) > 7) && !((pos.x + target.x) < 0 || (pos.y + target.y) < 0))
+                if(
+                    !((pos.x + target.x) > 7 || (pos.y + target.y) > 7) && 
+                    !((pos.x + target.x) < 0 || (pos.y + target.y) < 0) &&
+                    prev[pos.x + target.x][pos.y + target.y] == undefined 
+                )
                     prev[pos.x + target.x][pos.y + target.y] = { pos: pos, newPos: {x: pos.x + target.x, y: pos.y + target.y}, type: "move", setMap: moveHandler} as moveProps
                 else if(
-                    prev[pos.x + target.x][pos.y + target.y] != undefined && 
                     !((pos.y + (target.y * 2)) > 7 || (pos.x + (target.x * 2)) > 7) && 
                     !((pos.y + (target.y * 2)) < 0 || (pos.x + (target.x * 2)) < 0) &&
+                    prev[pos.x + target.x][pos.y + target.y] != undefined && 
                     prev[pos.x + (target.x * 2)][pos.y + (target.y * 2)] == undefined 
                 ){
                     prev[pos.x + (target.x * 2)][pos.y + (target.y * 2)] = { pos: pos, newPos: {x: pos.x + (target.x * 2), y: pos.y + (target.y * 2)}, type: "move", setMap: moveHandler} as moveProps
@@ -70,8 +73,6 @@ export const Dama = () => {
 
             return prev.slice();
         })    
-        
-        // setLoading(true)
     }
 
     const moveHandler = ( pos: {x: number, y: number}, newPos: {x: number, y: number} ) => {
@@ -90,8 +91,6 @@ export const Dama = () => {
 
             return prev.slice();
         })
-        
-        // setLoading(true)
     }
 
     useEffect(() => { 
@@ -108,19 +107,11 @@ export const Dama = () => {
         
             setBoard(prev => [...prev, aux])
         }
-
-        // setLoading(false) 
     }, [])
-
-    // useEffect(() => {
-    //     setLoading(false)
-    // }, [loading])
 
     return (
         <div className="dama-container">
             {       
-                // !loading && 
-                board &&
                 board.map((column, index) => 
                     <div className="dama-row" key={index}>
                     {

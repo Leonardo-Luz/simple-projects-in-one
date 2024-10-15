@@ -2,7 +2,8 @@
 // import damaPiece from "../../image/dama.png"
 
 export type moveProps = {
-    moveHandler?: ( pos: {x: number, y: number}, newPos: {x: number, y: number} ) => void
+    moveHandler?: ( pos: {x: number, y: number}, newPos: {x: number, y: number} ) => void,
+    team?: "black" | "white"
     type: "normal" | "dama" | "move",
     pos: {
         x: number,
