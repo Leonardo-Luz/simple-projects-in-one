@@ -1,0 +1,68 @@
+
+.cartesian-dama-container{
+    min-width: 70%;
+    max-width: 70%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+
+    background-color: darkslategray;
+    border-radius: 12px;
+}
+
+.cartesian-dama-row{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.move-tile{
+    width: 40px;
+    height: 40px;
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    background-color: lightgreen;
+}
+
+.cartesian-dama-tile{
+    width: 40px;
+    height: 40px;
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+}
+
+.temp-piece{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-radius: 100%;
+
+    box-shadow: 4px 10px 10px 1px black;
+}
+
+.useless-tile{
+    width: 40px;
+    height: 40px;
+
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    background-color: rgba(127, 146, 255, 0.527);   
+    
+    border-radius: 8px;
+}

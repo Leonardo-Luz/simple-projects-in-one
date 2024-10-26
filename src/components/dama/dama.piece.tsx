@@ -11,7 +11,7 @@ export type pieceProps = {
     }
 }
 
-export const Piece = ( { setMove, pos, type }: pieceProps ) => {
+export const Piece = ( { team , setMove, pos, type }: pieceProps ) => {
 
     const moveHandler = () => {
         setMove &&
@@ -28,7 +28,7 @@ export const Piece = ( { setMove, pos, type }: pieceProps ) => {
                 // src="#" 
                 // alt="piece" 
                 className="temp-piece"
-                style={pos.x > 4 ? {backgroundColor: "darkgray", outline: "3px solid black"} : {backgroundColor: "lightblue", outline: "3px solid black"}}
+                style={ team == "black" ? {backgroundColor: "darkgray", outline: "3px solid black"} : {backgroundColor: "lightblue", outline: "3px solid black"}}
             />   
         </div>
     )

@@ -4,7 +4,7 @@ import { Piece, pieceProps } from "./dama.piece"
 import "./dama.style.css"
 import { Move, moveProps } from "./move.tile"
 
-export const Dama = () => {
+export const DamaBoard = () => {
 
     const [ board, setBoard ] = useState<((pieceProps) | (moveProps) | undefined)[][]>([])
 

@@ -1,5 +1,5 @@
 import { Calculadora } from "../components/calculator/Calculadora"
-import { Dama } from "../components/dama/Dama"
+import { DamaBoard } from "../components/dama/DamaBoard"
 
 import "./home.style.css"
 
@@ -18,7 +18,7 @@ export const Home = () => {
                         Itaque, dolor alias? Voluptas eos velit voluptatem, sint esse dolor harum quod aut, dicta optio quasi magni. Beatae vero impedit quidem dolorem provident debitis repellendus nobis deleniti quae, exercitationem quisquam!
                         Temporibus eum distinctio obcaecati cumque, similique ipsa sint! Natus odio a cum possimus ipsa tenetur eaque, quo quaerat autem praesentium inventore excepturi laborum eius voluptate asperiores voluptatum itaque dolore impedit.</p>
                     </div>
-                    <Dama />
+                    <DamaBoard />
                 </div>
 
                 <hr className="project-hr" />

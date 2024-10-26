@@ -3,6 +3,7 @@ import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Error, Home } from './routes'
+import { Dama } from './routes/Dama.route.tsx'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/dama',
+        element: <Dama />
       }
     ]
   }

@@ -2,8 +2,9 @@
 // import damaPiece from "../../image/dama.png"
 
 export type moveProps = {
-    moveHandler?: ( pos: {x: number, y: number}, newPos: {x: number, y: number} ) => void,
-    team?: "black" | "white"
+    moveHandler?: ( pos: {x: number, y: number}, newPos: {x: number, y: number}, team: "black" | "white" ) => void,
+    team?: "black" | "white",
+    kill?: boolean,
     type: "normal" | "dama" | "move",
     pos: {
         x: number,
@@ -17,11 +18,11 @@ export type moveProps = {
 
 // add side
 
-export const Move = ( { moveHandler, pos, newPos, type }: moveProps ) => {
+export const Move = ( { moveHandler, pos, newPos, type, team, kill }: moveProps ) => {
 
     const clickHandler = () => {        
         moveHandler &&
-        moveHandler(pos, newPos);
+        moveHandler(pos, newPos, team!);
     }
  
     return (
